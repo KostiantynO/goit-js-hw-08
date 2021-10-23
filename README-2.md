@@ -25,6 +25,13 @@ Cloning template:
 
     git clone https://github.com/KostiantynO/parcel-project-template
 
+```json
+"homepage": "https://KostiantynO.github.io/goit-js-hw-08",
+"scripts": {
+  "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+},
+```
+
 Development:
 
     git add . && git commit -m "adds initial project files" && git push
