@@ -51,3 +51,5 @@ Development:
     npm install simplelightbox
 
     git add . && git commit -m "adds 1st task solution" && git push
+
+    npm install @vimeo/player
