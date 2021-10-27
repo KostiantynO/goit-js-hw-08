@@ -29,7 +29,9 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform var(--time) var(--cubic);
+
+  transform: translateX(50%);
+  opacity: 0.01;
 }
 
 .gallery__link {
@@ -40,4 +42,12 @@
 
 .gallery__link:hover {
   cursor: zoom-in;
+}
+
+.appear {
+  transform: translate(0);
+  opacity: 1;
+
+  transition: var(--time) var(--cubic);
+  transition-property: transform, opacity;
 }

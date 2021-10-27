@@ -1,35 +1,9 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-import { galleryItems } from './gallery-items';
+import { initGallery } from './modules/01-gallery/gallery';
+import { initModal } from './modules/01-gallery/modal';
+import { initLazyload } from './modules/01-gallery/lazyload';
 
-// gallery
-const gallery = document.querySelector('.gallery');
+initGallery('.gallery');
 
-const galleryMarkup = createMarkup(galleryItems);
-renderMarkup(galleryMarkup, gallery);
+initModal('.gallery a');
 
-// modal
-const modal = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  animationSpeed: 210,
-  fadeSpeed: 210,
-});
-
-// functions
-function itemMarkup({ preview, original, description }) {
-  return `
-  <li class="gallery__item">
-    <a class="gallery__link" href="${original}">
-      <img class="gallery__image" src="${preview}" alt="${description}" title="${description}"/>
-    </a>
-  </li>
-`;
-}
-function createMarkup(imgArray) {
-  return imgArray?.map(img => itemMarkup(img))?.join('');
-}
-function renderMarkup(bigString, targetEl) {
-  if (targetEl) {
-    targetEl.innerHTML = bigString;
-  }
-}
+initLazyload({ addClass: 'appear' });

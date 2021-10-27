@@ -53,3 +53,8 @@ Development:
     git add . && git commit -m "adds 1st task solution" && git push
 
     npm install @vimeo/player
+    npm run dev
+    git add . && git commit -m "adds 2nd task solution" && git push
+
+    npm run dev
+    git add . && git commit -m "adds 3rd task solution and modular structure" && git push
